@@ -67,7 +67,7 @@
     </collision>
   </link>
 
-  <joint name="hande_joint_finger" type="prismatic">
+  <!-- <joint name="hande_joint_finger" type="prismatic">
     <origin rpy="0 0 0" xyz="0 0 0.099"/>
     <parent link="hande_robotiq_hande_base_link"/>
     <child link="hande_left_finger"/>
@@ -81,6 +81,18 @@
     <axis xyz="1 0 0"/>
     <limit effort="130" lower="0" upper="0.025" velocity="0.15"/>
     <mimic joint="hande_joint_finger" multiplier="1" offset="0"/>
+  </joint> -->
+  <joint name="hande_joint_finger" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.099"/>
+    <parent link="hande_robotiq_hande_base_link"/>
+    <child link="hande_left_finger"/>
+    <axis xyz="-1 0 0"/>
+  </joint>
+  <joint name="robotiq_hande_base_to_hande_right_finger" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.099"/>
+    <parent link="hande_robotiq_hande_base_link"/>
+    <child link="hande_right_finger"/>
+    <axis xyz="1 0 0"/>
   </joint>
 
   <link name="realsense_link">

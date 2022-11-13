@@ -117,12 +117,12 @@
               <origin rpy="0 0 0" xyz="0 0 0" />
               <inertia ixx="170.667" ixy="0" ixz="0" iyy="170.667" iyz="0" izz="170.667" />
           </inertial>
-          <collision>
+          <!-- <collision>
               <origin rpy="0 0 0" xyz="0 0 0" />
               <geometry>
               <box size="0.4 0.4 0.26" />
               </geometry>
-          </collision>
+          </collision> -->
           <visual>
               <origin rpy="0 0 0" xyz="0 0 0" />
               <geometry>
